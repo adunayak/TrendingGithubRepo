@@ -39,6 +39,7 @@ Data layer implements the interface to provide the application data to domain la
 5. Retrofit using OkHttp - For Rest api calls
 6. Room - ORM library for data caching
 7. Junit, Mockito and espresso for unit and UI testing
+8. RxJava and RxAndroid for reactive programming
 
 # Reference
 
