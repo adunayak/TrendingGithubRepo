@@ -8,6 +8,10 @@ import dagger.Binds
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
+/**
+ * Dagger Module to provide {@link PostExecutionThread}  Object for dependency injection.
+ * Also to inject Activity fields
+ */
 @Module
 abstract class UiModule {
 

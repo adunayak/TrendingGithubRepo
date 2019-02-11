@@ -11,6 +11,9 @@ import dagger.Module
 import dagger.multibindings.IntoMap
 import kotlin.reflect.KClass
 
+/**
+ * Dagger Module to provide View Model Object for dependency injection
+ */
 @Module
 abstract class PresentationModule {
 

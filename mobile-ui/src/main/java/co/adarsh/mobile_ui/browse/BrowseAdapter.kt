@@ -12,6 +12,9 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import javax.inject.Inject
 
+/**
+ * {@link RecyclerView.Adapter} to map data to UI
+ */
 class BrowseAdapter @Inject constructor(): RecyclerView.Adapter<BrowseAdapter.ViewHolder>() {
 
     var projects: List<Project> = arrayListOf()
@@ -54,6 +57,9 @@ class BrowseAdapter @Inject constructor(): RecyclerView.Adapter<BrowseAdapter.Vi
         }
     }
 
+    /**
+     * ViewHolder to inflate for each cell
+     */
     inner class ViewHolder(view: View): RecyclerView.ViewHolder(view) {
         var avatarImage: ImageView
         var ownerNameText: TextView

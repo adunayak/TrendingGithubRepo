@@ -1,5 +1,8 @@
 package co.adarsh.presentation.state
 
+/**
+ *  View state model to represent possible view states for UI
+ */
 class Resource<out T> constructor(val status: ResourceState,
                                   val data: T?,
                                   val message: String?) {

@@ -10,6 +10,9 @@ import io.reactivex.Flowable
 import io.reactivex.Single
 import javax.inject.Inject
 
+/**
+ * Implements {@link ProjectsCache} to provide data from database and map it to data model
+ */
 class ProjectsCacheImpl @Inject constructor(
         private val projectsDatabase: ProjectsDatabase,
         private val mapper: CachedProjectMapper)
@@ -58,6 +61,12 @@ class ProjectsCacheImpl @Inject constructor(
         }
     }
 
+    /**
+     * Check if project cached
+     *
+     * @return Single<Boolean>
+     *
+     */
     override fun areProjectsCached(): Single<Boolean> {
         return projectsDatabase.cachedProjectsDao().getProjects().isEmpty
                 .map {
@@ -65,6 +74,9 @@ class ProjectsCacheImpl @Inject constructor(
                 }
     }
 
+    /**
+     * set last cached time to check for cache expiry
+     */
     override fun setLastCacheTime(lastCache: Long): Completable {
         return Completable.defer {
             projectsDatabase.configDao().insertConfig(Config(lastCacheTime = lastCache))
@@ -72,6 +84,9 @@ class ProjectsCacheImpl @Inject constructor(
         }
     }
 
+    /**
+     * check if project expired based on current and last cached time. Expiry time is set to 60 min
+     */
     override fun isProjectsCacheExpired(): Flowable<Boolean> {
         val currentTime = System.currentTimeMillis()
         val expirationTime = (60 * 10 * 1000).toLong()

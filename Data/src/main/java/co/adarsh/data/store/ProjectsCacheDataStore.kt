@@ -7,9 +7,15 @@ import io.reactivex.Completable
 import io.reactivex.Flowable
 import javax.inject.Inject
 
+/**
+ *  Interface adapter layer {@link ProjectsDataStore} to provide the data from cache layer
+ *
+ *  @param ProjectsCache
+ */
 open class ProjectsCacheDataStore @Inject constructor(
         private val projectsCache: ProjectsCache)
     : ProjectsDataStore {
+
 
     override fun getProjects(): Flowable<List<ProjectEntity>> {
         return projectsCache.getProjects()

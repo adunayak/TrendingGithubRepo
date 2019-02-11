@@ -9,6 +9,9 @@ import dagger.android.HasActivityInjector
 import timber.log.Timber
 import javax.inject.Inject
 
+/**
+ *  Application class {@link Application} : Only once called per application
+ */
 class GithubTrendingApplication: Application(), HasActivityInjector {
 
     @Inject lateinit var androidInjector: DispatchingAndroidInjector<Activity>

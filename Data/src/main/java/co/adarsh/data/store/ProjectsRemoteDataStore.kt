@@ -7,6 +7,11 @@ import io.reactivex.Completable
 import io.reactivex.Flowable
 import javax.inject.Inject
 
+/**
+ *  Interface adapter layer {@link ProjectsDataStore} to provide the data from remote layer
+ *
+ *  @param ProjectsCache
+ */
 open class ProjectsRemoteDataStore @Inject constructor(
         private val projectsRemote: ProjectsRemote)
     : ProjectsDataStore {

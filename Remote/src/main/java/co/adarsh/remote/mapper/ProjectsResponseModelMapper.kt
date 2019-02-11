@@ -4,6 +4,9 @@ import co.adarsh.data.model.ProjectEntity
 import co.adarsh.remote.model.ProjectModel
 import javax.inject.Inject
 
+/**
+ * Mapper to map the remote data model to data model and vice versa
+ */
 class ProjectsResponseModelMapper @Inject constructor(): ModelMapper<ProjectModel, ProjectEntity> {
 
     override fun mapFromModel(model: ProjectModel): ProjectEntity {

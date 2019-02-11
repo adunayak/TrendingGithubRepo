@@ -13,6 +13,9 @@ import dagger.Component
 import dagger.android.AndroidInjectionModule
 import javax.inject.Singleton
 
+/**
+ * Application Dagger Component interface to create application level objects using dagger dependency injection framework
+ */
 @Singleton
 @Component(modules = arrayOf(AndroidInjectionModule::class,
         ApplicationModule::class,

@@ -5,6 +5,10 @@ import android.arch.persistence.room.Entity
 import android.arch.persistence.room.PrimaryKey
 import co.adarsh.cache.db.ProjectConstants
 
+/**
+ *  Model to create Project table and properties using room lib annotation
+ *
+ */
 @Entity(tableName = ProjectConstants.TABLE_NAME)
 data class CachedProject(
         @PrimaryKey

@@ -10,6 +10,10 @@ import co.adarsh.cache.model.CachedProject
 import co.adarsh.cache.model.Config
 import javax.inject.Inject
 
+/**
+ *  To create Project database using room library. Creates sqlite database using room database builder
+ *
+ */
 @Database(entities = arrayOf(CachedProject::class,
         Config::class), version = 1)
 abstract class ProjectsDatabase @Inject constructor(): RoomDatabase() {

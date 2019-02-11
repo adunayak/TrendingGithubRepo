@@ -8,6 +8,10 @@ import co.adarsh.cache.db.ConfigConstants
 import co.adarsh.cache.model.Config
 import io.reactivex.Flowable
 
+/**
+ *  Dao interface to query and cache and update expiry config
+ *
+ */
 @Dao
 abstract class ConfigDao {
 

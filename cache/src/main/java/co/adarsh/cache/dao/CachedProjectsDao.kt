@@ -11,6 +11,10 @@ import co.adarsh.cache.db.ProjectConstants.QUERY_UPDATE_BOOKMARK_STATUS
 import co.adarsh.cache.model.CachedProject
 import io.reactivex.Flowable
 
+/**
+ *  Dao interface to query, store and delete projects
+ *
+ */
 @Dao
 abstract class CachedProjectsDao {
 
