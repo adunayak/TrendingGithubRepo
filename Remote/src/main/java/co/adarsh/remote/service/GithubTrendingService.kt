@@ -6,7 +6,7 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 /**
- * {@link Retrofit} service to search github repo.
+ * [Retrofit] service to search github repo.
  */
 interface GithubTrendingService {
 

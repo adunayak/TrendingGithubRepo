@@ -46,7 +46,7 @@ open class BrowseProjectsViewModel @Inject internal constructor(
     }
 
     /**
-     *  List<ProjectView> {@link LiveData} to handle config changes.
+     *  List<ProjectView> [LiveData] to handle config changes.
      */
     fun getProjects(): LiveData<Resource<List<ProjectView>>> {
         return liveData
@@ -77,7 +77,7 @@ open class BrowseProjectsViewModel @Inject internal constructor(
     }
 
     /**
-     * {@link DisposableObserver} passed to use case to observe project data fetch.
+     * [DisposableObserver] passed to use case to observe project data fetch.
      *  Live data posts success message if fetching is successful else error message is triggered
      */
     inner class ProjectsSubscriber: DisposableObserver<List<Project>>() {
@@ -95,7 +95,7 @@ open class BrowseProjectsViewModel @Inject internal constructor(
     }
 
     /**
-     * {@link DisposableCompletableObserver} passed to use case to observe project book mark and unbook mark.
+     * [DisposableCompletableObserver] passed to use case to observe project book mark and unbook mark.
      *  Live data posts success message if operation is successful else error message is triggered
      */
     inner class BookmarkProjectsSubscriber: DisposableCompletableObserver() {

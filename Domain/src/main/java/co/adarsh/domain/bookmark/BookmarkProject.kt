@@ -8,7 +8,7 @@ import io.reactivex.Completable
 import javax.inject.Inject
 
 /**
- *  Use case {@link CompletableUseCase} to book mark a project.
+ *  Use case [CompletableUseCase] to book mark a project.
  *
  *  @param ProjectsRepository
  *  @param PostExecutionThread
@@ -19,7 +19,7 @@ open class BookmarkProject @Inject constructor(
     : CompletableUseCase<BookmarkProject.Params>(postExecutionThread) {
 
     /**
-     * Use case {@link ObservableUseCase} to provide project
+     * Use case [CompletableUseCase] to provide project
      *
      * @param Params project ID is taken as input
      */

@@ -1,0 +1,99 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>BrowseProjectsViewModel - Presentation</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">Presentation</a>&nbsp;/&nbsp;<a href="../index.html">co.adarsh.presentation</a>&nbsp;/&nbsp;<a href="./index.html">BrowseProjectsViewModel</a><br/>
+<br/>
+<h1>BrowseProjectsViewModel</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">BrowseProjectsViewModel</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ViewModel</span></code>
+<p>View Model to fetch projects using use case classes and present to UI layer using live data</p>
+<h3>Parameters</h3>
+<p><a name="GetProjects"></a>
+<code>GetProjects</code> - Use case to get all the projects</p>
+<p><a name="BookmarkProject"></a>
+<code>BookmarkProject</code> - Use case to book mark a project</p>
+<p><a name="UnbookmarkProject"></a>
+<code>UnbookmarkProject</code> - Use case to un book mark a project</p>
+<p><a name="ProjectViewMapper"></a>
+<code>ProjectViewMapper</code> - Mapper to map the presentation model to UI model</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-bookmark-projects-subscriber/index.html">BookmarkProjectsSubscriber</a></p>
+</td>
+<td>
+<code><span class="keyword">inner</span> <span class="keyword">class </span><span class="identifier">BookmarkProjectsSubscriber</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">DisposableCompletableObserver</span></code>
+<p><a href="#">DisposableCompletableObserver</a> passed to use case to observe project book mark and unbook mark.
+Live data posts success message if operation is successful else error message is triggered</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-projects-subscriber/index.html">ProjectsSubscriber</a></p>
+</td>
+<td>
+<code><span class="keyword">inner</span> <span class="keyword">class </span><span class="identifier">ProjectsSubscriber</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">DisposableObserver</span><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><span class="identifier">Project</span><span class="symbol">&gt;</span><span class="symbol">&gt;</span></code>
+<p><a href="#">DisposableObserver</a> passed to use case to observe project data fetch.
+Live data posts success message if fetching is successful else error message is triggered</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="bookmark-project.html">bookmarkProject</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">bookmarkProject</span><span class="symbol">(</span><span class="identifier" id="co.adarsh.presentation.BrowseProjectsViewModel$bookmarkProject(kotlin.String)/projectId">projectId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Book mark a project asynchronously. No result is triggered as use case is of type completable type</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="fetch-projects.html">fetchProjects</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">fetchProjects</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Load projects asynchronously and post loading message to UI</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="get-projects.html">getProjects</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getProjects</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">LiveData</span><span class="symbol">&lt;</span><a href="../../co.adarsh.presentation.state/-resource/index.html"><span class="identifier">Resource</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../../co.adarsh.presentation.model/-project-view/index.html"><span class="identifier">ProjectView</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span><span class="symbol">&gt;</span></code>
+<p>List <a href="#">LiveData</a> to handle config changes.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="on-cleared.html">onCleared</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onCleared</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>When view no longer exists unsubscribe all the observers,
+so that nothing notified after async operation completes</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="unbookmark-project.html">unbookmarkProject</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">unbookmarkProject</span><span class="symbol">(</span><span class="identifier" id="co.adarsh.presentation.BrowseProjectsViewModel$unbookmarkProject(kotlin.String)/projectId">projectId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Un book mark a project asynchronously. No result is triggered as use case is of type completable type</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

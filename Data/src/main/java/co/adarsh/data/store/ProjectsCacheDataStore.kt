@@ -8,7 +8,7 @@ import io.reactivex.Flowable
 import javax.inject.Inject
 
 /**
- *  Interface adapter layer {@link ProjectsDataStore} to provide the data from cache layer
+ *  Interface adapter layer [ProjectsDataStore] to provide the data from cache layer
  *
  *  @param ProjectsCache
  */

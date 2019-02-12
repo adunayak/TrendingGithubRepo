@@ -8,7 +8,7 @@ import io.reactivex.Flowable
 import javax.inject.Inject
 
 /**
- * Implements {@link ProjectsRemote} to provide data from server and map it to project data model
+ * Implements [ProjectsRemote] to provide data from server and map it to project data model
  */
 class ProjectsRemoteImpl @Inject constructor(
         private val service: GithubTrendingService,

@@ -30,7 +30,7 @@ abstract class ObservableUseCase<T, in Params> constructor(
     /**
      * Build and observe the observable and add to CompositeDisposable
      *
-     * @param DisposableObserver<T> : {@link Observer}
+     * @param DisposableObserver<T> : [Observer]
      * @param Params : Input to use case building
      */
     open fun execute(singleObserver: DisposableObserver<T>, params: Params? = null) {

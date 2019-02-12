@@ -30,7 +30,7 @@ abstract class CompletableUseCase<in Params> constructor(
     /**
      * Build and observe the completable and add to CompositeDisposable
      *
-     * @param DisposableObserver<T> : {@link Observer}
+     * @param DisposableObserver<T> : [Observer]
      * @param Params : Input to use case building
      */
     open fun execute(observer: DisposableCompletableObserver, params: Params? = null) {

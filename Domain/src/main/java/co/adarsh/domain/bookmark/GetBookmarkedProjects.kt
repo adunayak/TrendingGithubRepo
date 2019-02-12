@@ -8,7 +8,7 @@ import io.reactivex.Observable
 import javax.inject.Inject
 
 /**
- *  Use case {@link ObservableUseCase} to get book marked a project.
+ *  Use case [ObservableUseCase] to get book marked a project.
  *
  *  @param ProjectsRepository
  *  @param PostExecutionThread
@@ -19,7 +19,7 @@ open class GetBookmarkedProjects @Inject constructor(
     : ObservableUseCase<List<Project>, Nothing?>(postExecutionThread) {
 
     /**
-     * Use case {@link ObservableUseCase} to provide project
+     * Use case [ObservableUseCase] to provide project
      *
      * @param Nothing
      */

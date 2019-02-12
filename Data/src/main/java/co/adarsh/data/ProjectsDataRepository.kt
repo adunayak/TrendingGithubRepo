@@ -11,7 +11,7 @@ import io.reactivex.functions.BiFunction
 import javax.inject.Inject
 
 /**
- *  Implements {@link ProjectsRepository} to provide the data to usecase
+ *  Implements [ProjectsRepository] to provide the data to usecase
  *
  *  @param ProjectMapper
  *  @param ProjectsCache

@@ -36,7 +36,7 @@ class BrowseBookmarkedProjectsViewModel @Inject constructor(
     }
 
     /**
-     *  List<ProjectView> {@link LiveData} to handle config changes.
+     *  List<ProjectView> [LiveData] to handle config changes.
      */
     fun getProjects(): LiveData<Resource<List<ProjectView>>> {
         return liveData
@@ -51,7 +51,7 @@ class BrowseBookmarkedProjectsViewModel @Inject constructor(
     }
 
     /**
-     * {@link DisposableObserver} passed to use case to observe project data fetch.
+     * [DisposableObserver] passed to use case to observe project data fetch.
      *  Live data posts success message if fetching is successful else error message is triggered
      */
     inner class ProjectsSubscriber: DisposableObserver<List<Project>>() {

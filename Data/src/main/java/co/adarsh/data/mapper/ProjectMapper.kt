@@ -5,7 +5,7 @@ import co.adarsh.domain.model.Project
 import javax.inject.Inject
 
 /**
- * implements {@link EntityMapper} to map the pojo models from Domain to Data and vice versa
+ * implements [EntityMapper] to map the pojo models from Domain to Data and vice versa
  */
 open class ProjectMapper @Inject constructor() : EntityMapper<ProjectEntity, Project> {
 

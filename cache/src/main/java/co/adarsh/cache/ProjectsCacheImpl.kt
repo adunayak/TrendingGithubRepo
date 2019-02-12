@@ -11,7 +11,7 @@ import io.reactivex.Single
 import javax.inject.Inject
 
 /**
- * Implements {@link ProjectsCache} to provide data from database and map it to data model
+ * Implements [ProjectsCache] to provide data from database and map it to data model
  */
 class ProjectsCacheImpl @Inject constructor(
         private val projectsDatabase: ProjectsDatabase,

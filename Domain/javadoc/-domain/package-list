@@ -1,0 +1,10 @@
+$dokka.format:html
+$dokka.linkExtension:html
+
+co.adarsh.domain
+co.adarsh.domain.executor
+co.adarsh.domain.interactor
+co.adarsh.domain.interactor.bookmark
+co.adarsh.domain.interactor.browse
+co.adarsh.domain.model
+co.adarsh.domain.repository

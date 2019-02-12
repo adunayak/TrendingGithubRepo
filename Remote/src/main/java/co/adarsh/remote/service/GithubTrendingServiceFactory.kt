@@ -14,11 +14,11 @@ import java.util.concurrent.TimeUnit
 object GithubTrendingServiceFactory {
 
     /**
-     * method to create {@link GithubTrendingService}
+     * method to create [GithubTrendingService]
      *
-     * @param Boolean : isDebug flag to set log level for {@link HttpLoggingInterceptor}
+     * @param Boolean : isDebug flag to set log level for [HttpLoggingInterceptor]
      *
-     * @return {@link GithubTrendingService}
+     * @return GithubTrendingService
      */
     open fun makeGithubTrendingService(isDebug: Boolean): GithubTrendingService {
         val okHttpClient = makeOkHttpClient(
@@ -27,12 +27,12 @@ object GithubTrendingServiceFactory {
     }
 
     /**
-     * method to create {@link GithubTrendingService}
+     * method to create [GithubTrendingService]
      *
      * @param OkHttpClient : OkHttpClient to configure retrofit library for http calls
      * @param Gson : To map Json to Object
      *
-     * @return {GithubTrendingService
+     * @return GithubTrendingService
      */
     private fun makeGithubTrendingService(okHttpClient: OkHttpClient, gson: Gson): GithubTrendingService {
         val retrofit = Retrofit.Builder()
@@ -45,11 +45,11 @@ object GithubTrendingServiceFactory {
     }
 
     /**
-     * method to create {@link OkHttpClient}
+     * method to create [OkHttpClient]
      *
      * @param HttpLoggingInterceptor : log interceptor to log the http calls
      *
-     * @return {@link OkHttpClient}
+     * @return OkHttpClient
      */
     private fun makeOkHttpClient(httpLoggingInterceptor: HttpLoggingInterceptor): OkHttpClient {
         return OkHttpClient.Builder()
@@ -60,11 +60,11 @@ object GithubTrendingServiceFactory {
     }
 
     /**
-     * method to create {@link HttpLoggingInterceptor}.
+     * method to create [HttpLoggingInterceptor].
      *
-     * @param Boolean : isDebug flag to set log level for {@link HttpLoggingInterceptor}
+     * @param Boolean : isDebug flag to set log level for [HttpLoggingInterceptor]
      *
-     * @return {@link HttpLoggingInterceptor} : Logging is done only if build is of debug type
+     * @return [HttpLoggingInterceptor] : Logging is done only if build is of debug type
      */
     private fun makeLoggingInterceptor(isDebug: Boolean): HttpLoggingInterceptor {
         val logging = HttpLoggingInterceptor()

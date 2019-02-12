@@ -1,0 +1,102 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ProjectsCacheImpl - cache</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">cache</a>&nbsp;/&nbsp;<a href="../index.html">co.adarsh.cache</a>&nbsp;/&nbsp;<a href="./index.html">ProjectsCacheImpl</a><br/>
+<br/>
+<h1>ProjectsCacheImpl</h1>
+<code><span class="keyword">class </span><span class="identifier">ProjectsCacheImpl</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ProjectsCache</span></code>
+<p>Implements <a href="#">ProjectsCache</a> to provide data from database and map it to data model</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">ProjectsCacheImpl</span><span class="symbol">(</span><span class="identifier" id="co.adarsh.cache.ProjectsCacheImpl$<init>(co.adarsh.cache.db.ProjectsDatabase, co.adarsh.cache.mapper.CachedProjectMapper)/projectsDatabase">projectsDatabase</span><span class="symbol">:</span>&nbsp;<a href="../../co.adarsh.cache.db/-projects-database/index.html"><span class="identifier">ProjectsDatabase</span></a><span class="symbol">, </span><span class="identifier" id="co.adarsh.cache.ProjectsCacheImpl$<init>(co.adarsh.cache.db.ProjectsDatabase, co.adarsh.cache.mapper.CachedProjectMapper)/mapper">mapper</span><span class="symbol">:</span>&nbsp;<a href="../../co.adarsh.cache.mapper/-cached-project-mapper/index.html"><span class="identifier">CachedProjectMapper</span></a><span class="symbol">)</span></code>
+<p>Implements <a href="#">ProjectsCache</a> to provide data from database and map it to data model</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="are-projects-cached.html">areProjectsCached</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">areProjectsCached</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Single</span><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">&gt;</span></code>
+<p>Check if project cached</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="clear-projects.html">clearProjects</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">clearProjects</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Completable</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="get-bookmarked-projects.html">getBookmarkedProjects</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getBookmarkedProjects</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Flowable</span><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><span class="identifier">ProjectEntity</span><span class="symbol">&gt;</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="get-projects.html">getProjects</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getProjects</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Flowable</span><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><span class="identifier">ProjectEntity</span><span class="symbol">&gt;</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="is-projects-cache-expired.html">isProjectsCacheExpired</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">isProjectsCacheExpired</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Flowable</span><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">&gt;</span></code>
+<p>check if project expired based on current and last cached time. Expiry time is set to 60 min</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="save-projects.html">saveProjects</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">saveProjects</span><span class="symbol">(</span><span class="identifier" id="co.adarsh.cache.ProjectsCacheImpl$saveProjects(kotlin.collections.List((co.adarsh.data.model.ProjectEntity)))/projects">projects</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><span class="identifier">ProjectEntity</span><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Completable</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="set-last-cache-time.html">setLastCacheTime</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setLastCacheTime</span><span class="symbol">(</span><span class="identifier" id="co.adarsh.cache.ProjectsCacheImpl$setLastCacheTime(kotlin.Long)/lastCache">lastCache</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Completable</span></code>
+<p>set last cached time to check for cache expiry</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="set-project-as-bookmarked.html">setProjectAsBookmarked</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setProjectAsBookmarked</span><span class="symbol">(</span><span class="identifier" id="co.adarsh.cache.ProjectsCacheImpl$setProjectAsBookmarked(kotlin.String)/projectId">projectId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Completable</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="set-project-as-not-bookmarked.html">setProjectAsNotBookmarked</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setProjectAsNotBookmarked</span><span class="symbol">(</span><span class="identifier" id="co.adarsh.cache.ProjectsCacheImpl$setProjectAsNotBookmarked(kotlin.String)/projectId">projectId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Completable</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>
