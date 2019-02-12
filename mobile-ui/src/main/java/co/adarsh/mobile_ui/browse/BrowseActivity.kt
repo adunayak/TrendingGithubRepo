@@ -21,6 +21,9 @@ import dagger.android.AndroidInjection
 import kotlinx.android.synthetic.main.activity_browse.*
 import javax.inject.Inject
 
+/**
+ *  Browse activity provides activity to render the project list UI
+ */
 class BrowseActivity : AppCompatActivity() {
 
     @Inject lateinit var browseAdapter: BrowseAdapter
@@ -55,6 +58,9 @@ class BrowseActivity : AppCompatActivity() {
         return true
     }
 
+    /**
+     *  list book marked projects when user clicks book mark action from menu
+     */
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.action_bookmarked -> {
@@ -65,12 +71,18 @@ class BrowseActivity : AppCompatActivity() {
         }
     }
 
+    /**
+     *  Configure recycler view to list the projects
+     */
     private fun setupBrowseRecycler() {
         browseAdapter.projectListener = projectListener
         recycler_projects.layoutManager = LinearLayoutManager(this)
         recycler_projects.adapter = browseAdapter
     }
 
+    /**
+     *  Set data to recycler view on success / enable loader while fetching
+     */
     private fun handleDataState(resource: Resource<List<ProjectView>>) {
         when (resource.status) {
             ResourceState.SUCCESS -> {
@@ -85,6 +97,9 @@ class BrowseActivity : AppCompatActivity() {
         }
     }
 
+    /**
+     *  Set data adapter to recycler view to show the map the data to cells
+     */
     private fun setupScreenForSuccess(projects: List<Project>?) {
         progress.visibility = View.GONE
         projects?.let {
@@ -96,6 +111,10 @@ class BrowseActivity : AppCompatActivity() {
         }
     }
 
+
+    /**
+     * set project listener to listen for book mark button events from adapter
+     */
     private val projectListener = object : ProjectListener {
         override fun onBookmarkedProjectClicked(projectId: String) {
             browseViewModel.unbookmarkProject(projectId)

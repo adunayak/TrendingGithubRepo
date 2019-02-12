@@ -5,6 +5,9 @@ import io.reactivex.Completable
 import io.reactivex.Flowable
 import io.reactivex.Single
 
+/**
+ *  Interface implemented by cache layer to provides cached result
+ */
 interface ProjectsCache  {
 
     fun clearProjects(): Completable

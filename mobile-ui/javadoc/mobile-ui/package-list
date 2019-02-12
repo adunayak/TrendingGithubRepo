@@ -1,0 +1,10 @@
+$dokka.format:html
+$dokka.linkExtension:html
+
+co.adarsh.mobile_ui
+co.adarsh.mobile_ui.bookmarked
+co.adarsh.mobile_ui.browse
+co.adarsh.mobile_ui.injection
+co.adarsh.mobile_ui.injection.module
+co.adarsh.mobile_ui.mapper
+co.adarsh.mobile_ui.model

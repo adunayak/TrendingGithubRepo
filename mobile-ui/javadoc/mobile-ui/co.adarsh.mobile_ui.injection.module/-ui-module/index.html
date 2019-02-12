@@ -1,0 +1,56 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>UiModule - mobile-ui</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">mobile-ui</a>&nbsp;/&nbsp;<a href="../index.html">co.adarsh.mobile_ui.injection.module</a>&nbsp;/&nbsp;<a href="./index.html">UiModule</a><br/>
+<br/>
+<h1>UiModule</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">UiModule</span></code>
+<p>Dagger Module to provide {@link PostExecutionThread}  Object for dependency injection.
+Also to inject Activity fields</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">UiModule</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Dagger Module to provide {@link PostExecutionThread}  Object for dependency injection.
+Also to inject Activity fields</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="bind-post-execution-thread.html">bindPostExecutionThread</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">bindPostExecutionThread</span><span class="symbol">(</span><span class="identifier" id="co.adarsh.mobile_ui.injection.module.UiModule$bindPostExecutionThread(co.adarsh.mobile_ui.UiThread)/uiThread">uiThread</span><span class="symbol">:</span>&nbsp;<a href="../../co.adarsh.mobile_ui/-ui-thread/index.html"><span class="identifier">UiThread</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">PostExecutionThread</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="contributes-bookmarked-activity.html">contributesBookmarkedActivity</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">contributesBookmarkedActivity</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../co.adarsh.mobile_ui.bookmarked/-bookmarked-activity/index.html"><span class="identifier">BookmarkedActivity</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="contributes-browse-activity.html">contributesBrowseActivity</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">contributesBrowseActivity</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../co.adarsh.mobile_ui.browse/-browse-activity/index.html"><span class="identifier">BrowseActivity</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

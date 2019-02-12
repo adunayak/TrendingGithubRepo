@@ -8,6 +8,9 @@ import dagger.Binds
 import dagger.Module
 import dagger.Provides
 
+/**
+ * Dagger Module to provide project cache for dependency injection
+ */
 @Module
 abstract class CacheModule {
 

@@ -5,6 +5,9 @@ import android.content.Context
 import dagger.Binds
 import dagger.Module
 
+/**
+ * Dagger Module to provide application context
+ */
 @Module
 abstract class ApplicationModule {
 

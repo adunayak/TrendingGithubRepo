@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
+apply plugin: 'org.jetbrains.dokka-android'
 
 android {
     def globalConfiguration = rootProject.extensions.getByName("ext")
@@ -27,6 +28,10 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
+    dokka {
+        outputFormat = 'html'
+        outputDirectory = "${projectDir}/javadoc"
+    }
 }
 
 dependencies {

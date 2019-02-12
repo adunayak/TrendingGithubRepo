@@ -1,0 +1,7 @@
+$dokka.format:html
+$dokka.linkExtension:html
+
+co.adarsh.presentation
+co.adarsh.presentation.mapper
+co.adarsh.presentation.model
+co.adarsh.presentation.state

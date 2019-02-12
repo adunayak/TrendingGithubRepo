@@ -5,6 +5,9 @@ import io.reactivex.Flowable
 import retrofit2.http.GET
 import retrofit2.http.Query
 
+/**
+ * [Retrofit] service to search github repo.
+ */
 interface GithubTrendingService {
 
     @GET("search/repositories")

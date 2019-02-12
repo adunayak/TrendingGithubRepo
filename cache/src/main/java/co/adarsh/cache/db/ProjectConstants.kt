@@ -1,5 +1,9 @@
 package co.adarsh.cache.db
 
+/**
+ *  Singleton object to to maintain project table table constants
+ *
+ */
 object ProjectConstants {
 
     const val TABLE_NAME = "projects"

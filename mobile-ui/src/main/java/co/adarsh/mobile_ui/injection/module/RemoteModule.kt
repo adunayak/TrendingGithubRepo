@@ -9,6 +9,9 @@ import dagger.Binds
 import dagger.Module
 import dagger.Provides
 
+/**
+ * Dagger Module to provide {@link ProjectsRemote}  Object for dependency injection
+ */
 @Module
 abstract class RemoteModule {
 

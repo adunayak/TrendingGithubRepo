@@ -4,6 +4,10 @@ import co.adarsh.cache.model.CachedProject
 import co.adarsh.data.model.ProjectEntity
 import javax.inject.Inject
 
+/**
+ *  Cache mapper to map data between cache model and data model
+ *
+ */
 class CachedProjectMapper @Inject constructor(): CacheMapper<CachedProject, ProjectEntity> {
 
     override fun mapFromCached(type: CachedProject): ProjectEntity {

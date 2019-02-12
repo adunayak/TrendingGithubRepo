@@ -1,0 +1,48 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ProjectsRepository - Domain</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">Domain</a>&nbsp;/&nbsp;<a href="../index.html">co.adarsh.domain.repository</a>&nbsp;/&nbsp;<a href="./index.html">ProjectsRepository</a><br/>
+<br/>
+<h1>ProjectsRepository</h1>
+<code><span class="keyword">interface </span><span class="identifier">ProjectsRepository</span></code>
+<p>An interface which is implemented by data layer to provide the projects,
+bookmark a project, un bookmark project and get book marked projects</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="bookmark-project.html">bookmarkProject</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">bookmarkProject</span><span class="symbol">(</span><span class="identifier" id="co.adarsh.domain.repository.ProjectsRepository$bookmarkProject(kotlin.String)/projectId">projectId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Completable</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="get-bookmarked-projects.html">getBookmarkedProjects</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">getBookmarkedProjects</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Observable</span><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../../co.adarsh.domain.model/-project/index.html"><span class="identifier">Project</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="get-projects.html">getProjects</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">getProjects</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Observable</span><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../../co.adarsh.domain.model/-project/index.html"><span class="identifier">Project</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="unbookmark-project.html">unbookmarkProject</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">unbookmarkProject</span><span class="symbol">(</span><span class="identifier" id="co.adarsh.domain.repository.ProjectsRepository$unbookmarkProject(kotlin.String)/projectId">projectId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Completable</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

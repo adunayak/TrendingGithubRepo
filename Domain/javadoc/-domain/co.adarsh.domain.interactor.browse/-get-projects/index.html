@@ -1,0 +1,77 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>GetProjects - Domain</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">Domain</a>&nbsp;/&nbsp;<a href="../index.html">co.adarsh.domain.interactor.browse</a>&nbsp;/&nbsp;<a href="./index.html">GetProjects</a><br/>
+<br/>
+<h1>GetProjects</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">GetProjects</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../co.adarsh.domain/-observable-use-case/index.html"><span class="identifier">ObservableUseCase</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../../co.adarsh.domain.model/-project/index.html"><span class="identifier">Project</span></a><span class="symbol">&gt;</span><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-nothing/index.html"><span class="identifier">Nothing</span></a><span class="symbol">?</span><span class="symbol">&gt;</span></code>
+<p>Use case <a href="../../co.adarsh.domain/-observable-use-case/index.html">ObservableUseCase</a> to provide project.</p>
+<h3>Parameters</h3>
+<p><a name="ProjectsRepository"></a>
+<code>ProjectsRepository</code> - </p>
+<p><a name="PostExecutionThread"></a>
+<code>PostExecutionThread</code> - </p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">GetProjects</span><span class="symbol">(</span><span class="identifier" id="co.adarsh.domain.interactor.browse.GetProjects$<init>(co.adarsh.domain.repository.ProjectsRepository, co.adarsh.domain.executor.PostExecutionThread)/projectsRepository">projectsRepository</span><span class="symbol">:</span>&nbsp;<a href="../../co.adarsh.domain.repository/-projects-repository/index.html"><span class="identifier">ProjectsRepository</span></a><span class="symbol">, </span><span class="identifier" id="co.adarsh.domain.interactor.browse.GetProjects$<init>(co.adarsh.domain.repository.ProjectsRepository, co.adarsh.domain.executor.PostExecutionThread)/postExecutionThread">postExecutionThread</span><span class="symbol">:</span>&nbsp;<a href="../../co.adarsh.domain.executor/-post-execution-thread/index.html"><span class="identifier">PostExecutionThread</span></a><span class="symbol">)</span></code>
+<p>Use case <a href="../../co.adarsh.domain/-observable-use-case/index.html">ObservableUseCase</a> to provide project.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="build-use-case-observable.html">buildUseCaseObservable</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">buildUseCaseObservable</span><span class="symbol">(</span><span class="identifier" id="co.adarsh.domain.interactor.browse.GetProjects$buildUseCaseObservable(kotlin.Nothing)/params">params</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-nothing/index.html"><span class="identifier">Nothing</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Observable</span><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../../co.adarsh.domain.model/-project/index.html"><span class="identifier">Project</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span></code>
+<p>Use case <a href="../../co.adarsh.domain/-observable-use-case/index.html">ObservableUseCase</a> to provide project</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../co.adarsh.domain/-observable-use-case/add-disposable.html">addDisposable</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">addDisposable</span><span class="symbol">(</span><span class="identifier" id="co.adarsh.domain.ObservableUseCase$addDisposable(io.reactivex.disposables.Disposable)/disposable">disposable</span><span class="symbol">:</span>&nbsp;<span class="identifier">Disposable</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../co.adarsh.domain/-observable-use-case/dispose.html">dispose</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">dispose</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Remember to dispose the the disposable when use case finishes the task or task has to terminated</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../co.adarsh.domain/-observable-use-case/execute.html">execute</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">execute</span><span class="symbol">(</span><span class="identifier" id="co.adarsh.domain.ObservableUseCase$execute(io.reactivex.observers.DisposableObserver((co.adarsh.domain.ObservableUseCase.T)), co.adarsh.domain.ObservableUseCase.Params)/singleObserver">singleObserver</span><span class="symbol">:</span>&nbsp;<span class="identifier">DisposableObserver</span><span class="symbol">&lt;</span><a href="../../co.adarsh.domain/-observable-use-case/index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="co.adarsh.domain.ObservableUseCase$execute(io.reactivex.observers.DisposableObserver((co.adarsh.domain.ObservableUseCase.T)), co.adarsh.domain.ObservableUseCase.Params)/params">params</span><span class="symbol">:</span>&nbsp;<a href="../../co.adarsh.domain/-observable-use-case/index.html#Params"><span class="identifier">Params</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Build and observe the observable and add to CompositeDisposable</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

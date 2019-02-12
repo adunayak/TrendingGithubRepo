@@ -1,0 +1,82 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ProjectsCache - Data</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">Data</a>&nbsp;/&nbsp;<a href="../index.html">co.adarsh.data.repository</a>&nbsp;/&nbsp;<a href="./index.html">ProjectsCache</a><br/>
+<br/>
+<h1>ProjectsCache</h1>
+<code><span class="keyword">interface </span><span class="identifier">ProjectsCache</span></code>
+<p>Interface implemented by cache layer to provides cached result</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="are-projects-cached.html">areProjectsCached</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">areProjectsCached</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Single</span><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="clear-projects.html">clearProjects</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">clearProjects</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Completable</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="get-bookmarked-projects.html">getBookmarkedProjects</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">getBookmarkedProjects</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Flowable</span><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../../co.adarsh.data.model/-project-entity/index.html"><span class="identifier">ProjectEntity</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="get-projects.html">getProjects</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">getProjects</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Flowable</span><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../../co.adarsh.data.model/-project-entity/index.html"><span class="identifier">ProjectEntity</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="is-projects-cache-expired.html">isProjectsCacheExpired</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">isProjectsCacheExpired</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Flowable</span><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="save-projects.html">saveProjects</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">saveProjects</span><span class="symbol">(</span><span class="identifier" id="co.adarsh.data.repository.ProjectsCache$saveProjects(kotlin.collections.List((co.adarsh.data.model.ProjectEntity)))/projects">projects</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../../co.adarsh.data.model/-project-entity/index.html"><span class="identifier">ProjectEntity</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Completable</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="set-last-cache-time.html">setLastCacheTime</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">setLastCacheTime</span><span class="symbol">(</span><span class="identifier" id="co.adarsh.data.repository.ProjectsCache$setLastCacheTime(kotlin.Long)/lastCache">lastCache</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Completable</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="set-project-as-bookmarked.html">setProjectAsBookmarked</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">setProjectAsBookmarked</span><span class="symbol">(</span><span class="identifier" id="co.adarsh.data.repository.ProjectsCache$setProjectAsBookmarked(kotlin.String)/projectId">projectId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Completable</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="set-project-as-not-bookmarked.html">setProjectAsNotBookmarked</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">setProjectAsNotBookmarked</span><span class="symbol">(</span><span class="identifier" id="co.adarsh.data.repository.ProjectsCache$setProjectAsNotBookmarked(kotlin.String)/projectId">projectId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Completable</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

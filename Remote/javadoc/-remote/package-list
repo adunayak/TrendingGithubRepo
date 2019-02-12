@@ -1,0 +1,7 @@
+$dokka.format:html
+$dokka.linkExtension:html
+
+co.adarsh.remote
+co.adarsh.remote.mapper
+co.adarsh.remote.model
+co.adarsh.remote.service

@@ -6,6 +6,9 @@ import javax.inject.Inject
 import javax.inject.Provider
 import javax.inject.Singleton
 
+/**
+ * Factory class to provide View model through dependency injection
+ */
 @Singleton
 open class ViewModelFactory : ViewModelProvider.Factory {
 
